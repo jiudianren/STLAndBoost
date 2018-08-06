@@ -1,0 +1,12 @@
+echo "START , BOOS_ROOT and BOOS_ROOT_INTALL_DIR to change!"
+
+export BOOS_ROOT=/home/phub/boost_1_66_0
+export BOOS_ROOT_INTALL_DIR=/home/phub/boost_1_66_0/BoostIntallLPF
+
+
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$BOOS_ROOT
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BOOS_ROOT_INTALL_DIR/lib
+export LD_LIBRARY_PATH
+echo $LD_LIBRARY_PATH
+
+echo "End,ok!"
