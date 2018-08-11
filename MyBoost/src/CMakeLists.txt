@@ -1,6 +1,7 @@
 AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} DIR_SRCS)
 ADD_EXECUTABLE(myboost ${DIR_SRCS})
-TARGET_LINK_LIBRARIES(myboost boost_system boost_system-mt)
+#TARGET_LINK_LIBRARIES(myboost boost_filesystem boost_system)
+TARGET_LINK_LIBRARIES(myboost  boost_regex boost_filesystem boost_system)
 
 #example.cpp使用 boost-regex ，暂时没有，所以 example先不编译
 #apt-get install libboost-xxx-dev
