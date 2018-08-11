@@ -34,7 +34,7 @@ void test_foreach()
 }
 
 
-int main()
+int mainB_foreach()
 {
     test_foreach();
 

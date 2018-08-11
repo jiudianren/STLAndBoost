@@ -1,0 +1,26 @@
+
+
+CMAKE ·½Ê½
+
+mkdir build
+cd build
+
+#
+# Configure
+#
+[1] Debug mode
+cmake -DCMAKE_INSTALL_PREFIX=./ -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=`which gcc` -DCMAKE_CXX_COMPILER=`which c++` ..
+
+
+[2] Release with debuginfo mode [as default]
+cmake -DCMAKE_INSTALL_PREFIX=$HOME -DCMAKE_C_COMPILER=`which gcc` -DCMAKE_CXX_COMPILER=`which c++` ..
+
+#
+# make 
+#
+make 
+
+#
+# install
+#
+make install
