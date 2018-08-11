@@ -5,7 +5,7 @@ MAINTAINER  jiudiaren <lianpengfei12@foxmail.com>
  
 RUN apt-get update
 RUN apt-get -y install g++  gdb  cmake
-RUN apt-get -y install libboost-all-devel
+RUN apt-get -y install libboost-all-dev
 RUN  mkdir -p  /home/git/src
 COPY .  /home/git/src
 RUN  mkdir  /home/git/src/build
