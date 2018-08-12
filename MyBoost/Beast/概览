@@ -1,0 +1,12 @@
+Concurrent Programming
+Beast
+Portable HTTP, WebSocket, and network operations using only C++11 and Boost.Asio
+
+Author(s)
+Vinnie Falco
+First Release
+1.66.0
+Standard
+ 
+Categories
+Concurrent Programming, Input/Output

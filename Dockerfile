@@ -1,5 +1,5 @@
-FROM ubuntu:latest
- 
+#FROM ubuntu:latest
+FROM zouzias/boost:1.67.0
 #no git 
 MAINTAINER  jiudiaren <lianpengfei12@foxmail.com>
  
