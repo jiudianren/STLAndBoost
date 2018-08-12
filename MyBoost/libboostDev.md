@@ -12,7 +12,8 @@ sudo apt-get install libboost-all-dev
 
 如何查看当前安装的boost版本  
 
-    dpkg -S /usr/include/boost/version.hpp 
+    dpkg -S /usr/include/boost/version.hpp
+    dpkg -S /usr/include/boost/boost/version.hpp
 
 通过上面的命令，你就可以发现boost的版本了，查看结果可能如下：  
     
