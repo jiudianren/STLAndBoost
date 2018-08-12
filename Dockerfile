@@ -1,7 +1,8 @@
 FROM zouzias/boost:1.67.0
 
 RUN  cd /usr/include/ && rm -f boost_1_*.tar.gz 
-RUN  mkdir -p /home/boost &&  cp /usr/include/boost  /home/boost
+RUN  mkdir -p /home/boost 
+RUN  mv /usr/include/boost  /home/boost
 WORKDIR  /home/boost
 RUN bash ./bootstrap.sh --prefix=/usr --exec-prefix=/usr
 RUN bash ./b2 install
