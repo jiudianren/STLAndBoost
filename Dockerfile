@@ -4,8 +4,8 @@ RUN  cd /usr/include/ && rm -f boost_1_*.tar.gz
 RUN  mkdir -p /home/boost 
 RUN  mv /usr/include/boost  /home/boost
 WORKDIR  /home/boost
-RUN bash ./bootstrap.sh --prefix=/usr --exec-prefix=/usr
-RUN bash ./b2 install
+RUN bash /home/boost/bootstrap.sh --prefix=/usr --exec-prefix=/usr
+RUN bash /home/boost/b2 install
 
 #°²×°
 
