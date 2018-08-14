@@ -6,6 +6,13 @@ http://www.boost.org/doc/libs/1_66_0/more/getting_started/unix-variants.html
 
 
 
+
+...failed updating 54 targets...
+...skipped 6 targets...
+...updated 15616 targets...
+
+
+
 ### 项目使用的共享内存相关内容
 interprocess/managed_shared_memory
 http://www.boost.org/doc/libs/1_66_0/doc/html/interprocess.html  
