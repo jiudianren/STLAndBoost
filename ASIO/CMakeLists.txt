@@ -9,4 +9,4 @@ else()
 endif()
 
 add_subdirectory(Example1)
-add_subdirectory(post)
+add_subdirectory(PostAll)

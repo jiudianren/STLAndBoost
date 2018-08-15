@@ -1,0 +1,10 @@
+AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} DIR_SRCS)
+ADD_EXECUTABLE(dispatchTest  ${DIR_SRCS})
+TARGET_LINK_LIBRARIES(dispatchTest  boost_regex boost_filesystem boost_system boost_thread pthread)
+
+
+install(TARGETS dispatchTest
+        LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+        ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
+        RUNTIME DESTINATION ${BIN_INSTALL_DIR})
+
