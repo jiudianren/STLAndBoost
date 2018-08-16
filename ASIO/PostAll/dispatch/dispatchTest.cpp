@@ -33,7 +33,6 @@ void service_run() {
 int main(int argc, char* argv[]) {
     test( service.wrap(dispatched_func_2));
     boost::thread th(service_run);
-    boost::this_thread::sleep( boost::posix_time::millisec(500))
-    ;
+    boost::this_thread::sleep( boost::posix_time::millisec(500));
     th.join();
 }

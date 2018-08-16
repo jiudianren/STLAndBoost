@@ -8,5 +8,9 @@ else()
      message(STATUS "NO ENV{BOOSTLIB}, USER DEFAULT!" }) 
 endif()
 
+
+set(ASIO_SUB_BIN_INSTALL_DIR  ${BIN_INSTALL_DIR}/ASIO)
+
 add_subdirectory(Example1)
 add_subdirectory(PostAll)
+add_subdirectory(Syn)
