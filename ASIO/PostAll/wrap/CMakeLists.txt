@@ -5,5 +5,5 @@ TARGET_LINK_LIBRARIES(wrapTest  boost_regex boost_filesystem boost_system boost_
 install(TARGETS wrapTest
         LIBRARY DESTINATION ${LIB_INSTALL_DIR}
         ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
-        RUNTIME DESTINATION ${BIN_INSTALL_DIR})
+        RUNTIME DESTINATION ${ASIO_SUB_BIN_INSTALL_DIR})
 

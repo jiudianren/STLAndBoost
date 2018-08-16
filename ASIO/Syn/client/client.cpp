@@ -12,6 +12,7 @@
 #include <boost/system/error_code.hpp>
 #include <boost/asio/ip/tcp.hpp>
 
+#include <string.h>
 #include <iostream>
 
 using namespace std;
@@ -27,9 +28,9 @@ size_t read_complete(char * buf, const error_code & err, size_t bytes)
     return found ? 0 : 1;
 }
 void sync_echo(std::string msg) {
-    msg += "\n¡±;
+    msg += "\n";
     ip::tcp::socket sock(service);
-    ip::tcp::endpoint ep( ip::address::from_string("127.0.0.1"),80);
+    ip::tcp::endpoint ep( ip::address::from_string("127.0.0.1"),8001);
 
     sock.connect(ep);
     sock.write_some(buffer(msg));

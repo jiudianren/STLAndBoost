@@ -10,5 +10,5 @@ TARGET_LINK_LIBRARIES(strandTest  boost_regex boost_filesystem boost_system boos
 install(TARGETS strandTest
         LIBRARY DESTINATION ${LIB_INSTALL_DIR}
         ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
-        RUNTIME DESTINATION ${BIN_INSTALL_DIR})
+        RUNTIME DESTINATION ${ASIO_SUB_BIN_INSTALL_DIR})
 

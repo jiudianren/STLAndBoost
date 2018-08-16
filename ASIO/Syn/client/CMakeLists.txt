@@ -1,9 +1,9 @@
 AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} DIR_SRCS)
-ADD_EXECUTABLE(synclient  ${DIR_SRCS})
-TARGET_LINK_LIBRARIES(synclient  boost_regex boost_filesystem boost_system boost_thread pthread)
+ADD_EXECUTABLE(syClient  ${DIR_SRCS})
+TARGET_LINK_LIBRARIES(syClient  boost_regex boost_filesystem boost_system boost_thread pthread)
 
-install(TARGETS synclient
+install(TARGETS syClient
         LIBRARY DESTINATION ${LIB_INSTALL_DIR}
         ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
-        RUNTIME DESTINATION  $ASIO_SUB_BIN_INSTALL_DIR)
+        RUNTIME DESTINATION ${ASIO_SUB_BIN_INSTALL_DIR})
 
