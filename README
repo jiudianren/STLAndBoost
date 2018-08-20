@@ -1,13 +1,18 @@
 
 
-CMAKE 方式
 
+#full install
+bootstrap.sh --prefix=/usr --exec-prefix=/usr/lib/boost
+#small install
+./bjam stage --with-iostreams --with-log define=BOOST_LOG_USE_STD_REGEX define=BOOST_LOG_WITHOUT_WCHAR_T --with-system --with-date_time --with-filesystem link=shared runtime-link=shared threading=multi variant=release
+cp stage/lib/* ~/tools/runtime/lib
+
+
+
+CMAKE 方式
 mkdir build
 cd build
 
-#
-# Configure
-#
 [1] Debug mode
 cmake -DCMAKE_INSTALL_PREFIX=./ -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=`which gcc` -DCMAKE_CXX_COMPILER=`which c++` ..
 
@@ -15,12 +20,9 @@ cmake -DCMAKE_INSTALL_PREFIX=./ -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=`whi
 [2] Release with debuginfo mode [as default]
 cmake -DCMAKE_INSTALL_PREFIX=$HOME -DCMAKE_C_COMPILER=`which gcc` -DCMAKE_CXX_COMPILER=`which c++` ..
 
-#
-# make 
-#
 make 
 
-#
-# install
-#
 make install
+
+
+

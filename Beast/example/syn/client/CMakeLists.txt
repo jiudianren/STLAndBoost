@@ -1,6 +1,6 @@
 AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} DIR_SRCS)
 ADD_EXECUTABLE(syHttpCli  ${DIR_SRCS})
-TARGET_LINK_LIBRARIES(syHttpCli  boost_regex boost_filesystem boost_system boost_thread pthread)
+TARGET_LINK_LIBRARIES(syHttpCli  boost_regex boost_filesystem boost_system boost_thread  ssl crypto pthread)
 
 install(TARGETS syHttpCli
         LIBRARY DESTINATION ${LIB_INSTALL_DIR}
