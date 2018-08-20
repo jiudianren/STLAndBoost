@@ -13,8 +13,4 @@ set(ASIO_SUB_BIN_INSTALL_DIR  ${BIN_INSTALL_DIR}/ASIO)
 
 message(STATUS " ASIO BIN DIR " ${ASIO_SUB_BIN_INSTALL_DIR}) 
 
-add_subdirectory(Example1)
-add_subdirectory(PostAll)
-add_subdirectory(Syn)
-add_subdirectory(As)
-add_subdirectory(As2)
+add_subdirectory(example)
