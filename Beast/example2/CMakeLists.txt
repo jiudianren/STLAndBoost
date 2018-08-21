@@ -1,2 +1,4 @@
 add_subdirectory(Client)
 add_subdirectory(Server)
+install(DIRECTORY Html DESTINATION ${BEAST_SUB_BIN_INSTALL_DIR}
+        FILE_PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
