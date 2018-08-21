@@ -34,7 +34,7 @@
 #include <memory>
 #include <string>
 #include <thread>
-#include "../../../example2/common/server_certificate.hpp"
+#include "../../common/server_certificate.hpp"
 
 using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
 namespace ssl = boost::asio::ssl;       // from <boost/asio/ssl.hpp>
