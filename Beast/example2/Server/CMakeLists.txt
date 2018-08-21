@@ -1,1 +1,2 @@
 add_subdirectory(synSserver)
+add_subdirectory(syn)
