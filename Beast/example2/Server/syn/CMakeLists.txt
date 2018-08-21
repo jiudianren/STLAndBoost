@@ -1,0 +1,9 @@
+AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR} DIR_SRCS)
+ADD_EXECUTABLE(synHttpSer  ${DIR_SRCS})
+TARGET_LINK_LIBRARIES(synHttpSer  boost_regex boost_filesystem boost_system boost_thread  ssl crypto pthread)
+
+install(TARGETS synHttpSer
+        LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+        ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
+        RUNTIME DESTINATION ${BEAST_SUB_BIN_INSTALL_DIR})
+
