@@ -18,7 +18,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
-#include "../../../example2/common/root_certificates.hpp"
+#include "../../example2/common/root_certificates.hpp"
 
 using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
 namespace ssl = boost::asio::ssl;       // from <boost/asio/ssl.hpp>
