@@ -7,8 +7,5 @@
 # Official repository: https://github.com/boostorg/beast
 #
 
-add_subdirectory (advanced)
-add_subdirectory (http)
-add_subdirectory (websocket)
-
-#add_subdirectory (echo-op)
+add_subdirectory (client)
+add_subdirectory (server)

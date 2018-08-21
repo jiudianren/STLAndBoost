@@ -1,3 +1,11 @@
+/*
+ * root_certificates.hpp
+ *
+ *  Created on: 2018年8月20日
+ *      Author: Administrator
+ */
+
+
 //
 // Copyright (c) 2016-2017 Vinnie Falco (vinnie dot falco at gmail dot com)
 //
@@ -26,14 +34,14 @@ load_root_certificates(ssl::context& ctx, boost::system::error_code& ec)
 {
     std::string const cert =
         /*  This is the DigiCert root certificate.
-            
+
             CN = DigiCert High Assurance EV Root CA
             OU = www.digicert.com
             O = DigiCert Inc
             C = US
 
             Valid to: Sunday, ?November ?9, ?2031 5:00:00 PM
-                                
+
             Thumbprint(sha1):
             5f b7 ee 06 33 e2 59 db ad 0c 4c 9a e6 d3 8f 1a 61 c7 dc 25
         */
@@ -61,12 +69,12 @@ load_root_certificates(ssl::context& ctx, boost::system::error_code& ec)
         "+OkuE6N36B9K\n"
         "-----END CERTIFICATE-----\n"
         /*  This is the GeoTrust root certificate.
-            
+
             CN = GeoTrust Global CA
             O = GeoTrust Inc.
             C = US
             Valid to: Friday, ‎May ‎20, ‎2022 9:00:00 PM
-                                
+
             Thumbprint(sha1):
             ‎de 28 f4 a4 ff e5 b9 2f a3 c5 03 d1 a3 49 a7 f9 96 2a 82 12
         */
@@ -129,3 +137,5 @@ load_root_certificates(ssl::context& ctx)
 }
 
 #endif
+
+

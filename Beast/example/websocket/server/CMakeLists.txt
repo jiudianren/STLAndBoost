@@ -7,8 +7,15 @@
 # Official repository: https://github.com/boostorg/beast
 #
 
-add_subdirectory (advanced)
-add_subdirectory (http)
-add_subdirectory (websocket)
+add_subdirectory (async)
+add_subdirectory (coro)
+add_subdirectory (fast)
+add_subdirectory (stackless)
+add_subdirectory (sync)
 
-#add_subdirectory (echo-op)
+if (OPENSSL_FOUND)
+    add_subdirectory (async-ssl)
+    add_subdirectory (coro-ssl)
+    add_subdirectory (stackless-ssl)
+    add_subdirectory (sync-ssl)
+endif()

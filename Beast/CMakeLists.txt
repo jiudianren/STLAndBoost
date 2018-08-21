@@ -13,4 +13,6 @@ set(BEAST_SUB_BIN_INSTALL_DIR  ${BIN_INSTALL_DIR}/Beast)
 
 message(STATUS " ASIO BIN DIR " ${ASIO_SUB_BIN_INSTALL_DIR}) 
 
-add_subdirectory(example)
+
+
+add_subdirectory(example2)

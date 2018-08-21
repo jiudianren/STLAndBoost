@@ -7,8 +7,12 @@
 # Official repository: https://github.com/boostorg/beast
 #
 
-add_subdirectory (advanced)
-add_subdirectory (http)
-add_subdirectory (websocket)
+build-project async ;
+build-project coro ;
+build-project crawl ;
+build-project sync ;
 
-#add_subdirectory (echo-op)
+# VFALCO How do I make this work on Windows and if OpenSSL is not available?
+#build-project async-ssl ;
+#build-project coro-ssl ;
+#build-project sync-ssl ;
