@@ -6,3 +6,14 @@ https://blog.csdn.net/gongluck93/article/details/79364205
 
 
 https://mmoaay.gitbooks.io/boost-asio-cpp-network-programming-chinese/content/
+
+
+
+Timer定时器
+https://blog.csdn.net/yockie/article/details/40386145
+
+值得提出的是，异步回调函数handler的参数中有一个error，注意这个error很重要，表明这个handler是因为超时被执行还是因为被cancel。
+
+符合2种情况之一，handler被执行：超时或者被cancel（可以通过此error的值进行区分）。
+这同时隐含的说明了除非io.stop被调用，否则handler一定会被执行。即便是被cancel。
+被cancel有多种方法，直接调用cancel或者调用expires_at，expires_from_now重新设置超时时间。
