@@ -1,8 +1,6 @@
 
-
 # openssl、x509、crt、cer、key、csr、ssl、tls 这些都是什么鬼?
 https://www.cnblogs.com/lan1x/p/5872915.html
-
 
 
 # openssl生成证书

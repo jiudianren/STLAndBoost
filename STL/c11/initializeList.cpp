@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <initializer_list>
+#include <set>
 
 template <class T>
 struct S {

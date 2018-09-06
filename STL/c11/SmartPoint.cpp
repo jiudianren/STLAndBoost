@@ -8,7 +8,7 @@
 
 #include "c11.h"
 #include "SmartPoint.h"
-
+#include <string.h>
 
 /*
  * auto_ptr±»c11ÆúÓÃ
