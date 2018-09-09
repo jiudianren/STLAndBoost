@@ -1,5 +1,7 @@
 
-
+为了使用https ，需要安装如下软件
+apt-get install -y openssl 
+apt-get install -y libssl-dev 
 
 #full install
 bootstrap.sh --prefix=/usr --exec-prefix=/usr/lib/boost

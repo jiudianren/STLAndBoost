@@ -9,7 +9,7 @@ else()
 endif()
 
 
-set(SPIRIT_SUB_BIN_INSTALL_DIR  ${BIN_INSTALL_DIR}/spirt)
+set(SPIRIT_SUB_BIN_INSTALL_DIR  ${BIN_INSTALL_DIR}/spirit)
 
 message(STATUS " spirit BIN DIR " ${VARIANT_SUB_BIN_INSTALL_DIR}) 
 
