@@ -260,3 +260,5 @@ lambda 表达式的 lambda 体（标准语法中的 compound-statement）可包含普通方法或函数
 
 
 
+
+# 捕获和 作为参数的区别

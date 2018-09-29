@@ -2,11 +2,15 @@
 为了使用https ，需要安装如下软件
 apt-get install -y openssl 
 apt-get install -y libssl-dev 
+apt-get install -y zlib1g-dev
 
 #full install
-bootstrap.sh --prefix=/usr --exec-prefix=/usr/lib/boost
-#small install
-./bjam stage --with-iostreams --with-log define=BOOST_LOG_USE_STD_REGEX define=BOOST_LOG_WITHOUT_WCHAR_T --with-system --with-date_time --with-filesystem link=shared runtime-link=shared threading=multi variant=release
+./bootstrap.sh --prefix=/usr --exec-prefix=/usr/lib/boost  --show-libraries
+./b2 installl  
+
+
+#partion install
+./bjam stage --with-iostreams --with-log define=BOOST_LOG_USE_STD_REGEX define=BOOST_LOG_WITHOUT_WCHAR_T --with-system --with-date_time --with-filesystem link=shared runtime-link=shared threading=multi variant=debug
 cp stage/lib/* ~/tools/runtime/lib
 
 
@@ -23,7 +27,6 @@ cmake -DCMAKE_INSTALL_PREFIX=./ -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=`whi
 cmake -DCMAKE_INSTALL_PREFIX=$HOME -DCMAKE_C_COMPILER=`which gcc` -DCMAKE_CXX_COMPILER=`which c++` ..
 
 make 
-
 make install
 
 
