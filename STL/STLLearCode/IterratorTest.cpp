@@ -4,12 +4,15 @@
  * http://www.cplusplus.com/reference/iterator/front_insert_iterator */
 
 
-
-// front_insert_iterator example
-#include <iostream>     // std::cout
+#include <iostream>
 #include <iterator>     // std::front_insert_iterator
-#include <deque>        // std::deque
-#include <algorithm>    // std::copy
+#include <deque>
+#include <algorithm>
+#include <map>
+#include <vector>
+#include <list>
+#include "IterratorTest.h"
+
 
 using namespace std;
 
@@ -48,25 +51,56 @@ int main () {
     std::cout << ' ' << *it;
 
 
-
-
-
   return 0;
 }
+
+
+/*
+ * 删除 vector中的重复元素；
+ * */
+
+int removeDuplicates(vector<int>& nums)  {
+    map<int,int> tmp_map;
+
+
+    for(vector<int>::iterator it = nums.begin(); it != nums.end(); ++it){
+        tmp_map[*it]++;
+        if(tmp_map[*it] != 1){
+
+
+            /*
+              上面代码，删除了vector中重复出现的元素，只保留了第一次出现的元素。
+              运行代码发现会出错，原因就是当erase函数执行一次之后后面的迭代器就会失效。
+            好在erase函数可以返回下一个可用的迭代器，因此只要保留这个返回值便可以解决这个问题，代码中注释掉的两行是正确的逻辑。
+    erase函数返回了下一个可用的迭代器，但是由于for 循环有个递增的动作，因此获得这个迭代器之后递减一，此时迭代器可正常工作
+             */
+
+//            nums.erase(it);
+
+            it = nums.erase(it);
+            it--;
+
+
+        }
+    }
+    for(auto c : nums)
+        cout<<c<<endl;
+    return nums.size();
+}
+
 
 void TTit()
 {
 
- int a=10;
- std::list<int *> alist;
- alist.push_back( &a);
+    int a=10;
+    std::list<int *> alist;
+    alist.push_back( &a);
 
- std::list<int*>::iterator it =alist.begin();
+    std::list<int*>::iterator it =alist.begin();
 
- printf( "%d \n", *it);
- int * temp= *it;
- printf( "%d \n",   *temp  );
-
+    printf( "%d \n", *it);
+    int * temp= *it;
+    printf( "%d \n",   *temp  );
 
 }
 
@@ -112,8 +146,7 @@ void TT()
 
 
 
-void TestIstream_iterator
-()
+void TestIstream_iterator()
 {
 
 	  double value1, value2;

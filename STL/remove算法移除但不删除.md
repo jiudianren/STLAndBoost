@@ -1,0 +1,22 @@
+
+	对于输入  654321123456
+	remvoe(begin, end , 3)
+	输出 654211245656
+	
+	
+
+移除但不删除，需要被移除的元素，会被后面的元素顶替，但这个时候，尾部的元素并不会被删除，而是原样保持不动。
+
+
+
+itres remove( begin(),end(), valuse);
+remove返回一个新的终点，改位置为重新整理后的元素的下一个位置，可以用erase( itres, end()), 将多余的元素删除
+
+
+#remove_copy()
+会讲符合要求的元素，赋值到另外的容器中。
+
+outputIt remove_copy(InputIt begin , InputIt end, outputIt begin, value)
+{
+
+}
