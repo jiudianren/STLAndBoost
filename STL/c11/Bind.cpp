@@ -7,36 +7,30 @@
 
 
 #include <functional>
-#include <iostream>
-class TestBind
-{
+#include "Bind.h"
 
-public:
-	TestBind(){};
-
-	void Func(int x, int y ){
-		std::cout<< "x: "<< x  << "y: " << y  << std::endl ;
-		std::cout << "++ y "<< ++y;
-		};
-};
-
+    using namespace std::placeholders;
 void TestBind()
 {
 
-	TestBind myBind;
-	std::function<void (int x, int y)> twoInt = std::bind( &TestBind::Func, & mybind );
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << "TestBind" <<std::endl;
 
+
+    TTestBind mybind;
+	std::function<void (int x, int y)> twoInt = std::bind( &TTestBind::Func, & mybind , _1 ,_2);
 	twoInt(1 ,2 );
-	auto oneInt = std::bind( &TestBind::Func, & mybind , 3 );
 
-	int ref= 4;
+	auto oneInt = std::bind( &TTestBind::Func, & mybind , 3 , _1);
+	int ref = 4;
 	oneInt(ref); //如果ref是一个类对象，这里存在一次拷贝的过程
 
 	std::cout<<"none std::ref : " << ref << std::endl; //4
-	ontInt( std::ref(ref)); //这里不会
+	oneInt( std::ref(ref)); //这里不会
 	std::cout<<" std::ref : "  << ref << std::endl;  //5
 
 
-	auto noneInt = std::bind( &TestBind::Func, & mybind , 5, 6);
-
+	auto noneInt = std::bind( &TTestBind::Func, & mybind , 5, 6);
+	noneInt();
 }

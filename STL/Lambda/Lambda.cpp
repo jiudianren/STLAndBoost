@@ -45,13 +45,11 @@ int mainLa()
 
 //	for_each() 中使用lambda
 
-
 	//先定义后使用
 	auto myLam= []
 				 {
 						 std::cout<<"hello my Lam"<<std::endl;
 				 };
-
 
 	myLam();
 
@@ -62,10 +60,6 @@ int mainLa()
 			 std::cout<<"using lam directly"<<std::endl;
 	 }
 	();
-
-
-
-
 
 	return 0;
 }
