@@ -1,5 +1,8 @@
 
 
+参考：
+more effetive c++ 侯捷  Item M29：引用计数
+
 
 https://www.cnblogs.com/cycxtz/p/4742970.html
 
